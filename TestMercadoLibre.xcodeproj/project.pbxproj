@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		F2202D442BD2ECD50005294A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D432BD2ECD50005294A /* AppDelegate.swift */; };
 		F2202D462BD2ECD50005294A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D452BD2ECD50005294A /* SceneDelegate.swift */; };
-		F2202D482BD2ECD50005294A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D472BD2ECD50005294A /* ViewController.swift */; };
-		F2202D4B2BD2ECD50005294A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F2202D4A2BD2ECD50005294A /* Base */; };
+		F2202D482BD2ECD50005294A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D472BD2ECD50005294A /* SearchController.swift */; };
 		F2202D4D2BD2ECDC0005294A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2202D4C2BD2ECDC0005294A /* Assets.xcassets */; };
 		F2202D502BD2ECDC0005294A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F2202D4F2BD2ECDC0005294A /* Base */; };
 		F2202D5B2BD2ECDD0005294A /* TestMercadoLibreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D5A2BD2ECDD0005294A /* TestMercadoLibreTests.swift */; };
-		F2202D652BD2ECDE0005294A /* TestMercadoLibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D642BD2ECDE0005294A /* TestMercadoLibreUITests.swift */; };
-		F2202D672BD2ECDE0005294A /* TestMercadoLibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2202D662BD2ECDE0005294A /* TestMercadoLibreUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +36,13 @@
 		F2202D402BD2ECD50005294A /* TestMercadoLibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMercadoLibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2202D432BD2ECD50005294A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2202D452BD2ECD50005294A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F2202D472BD2ECD50005294A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F2202D4A2BD2ECD50005294A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2202D472BD2ECD50005294A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		F2202D4C2BD2ECDC0005294A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2202D4F2BD2ECDC0005294A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2202D512BD2ECDC0005294A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2202D562BD2ECDD0005294A /* TestMercadoLibreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMercadoLibreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2202D5A2BD2ECDD0005294A /* TestMercadoLibreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMercadoLibreTests.swift; sourceTree = "<group>"; };
 		F2202D602BD2ECDE0005294A /* TestMercadoLibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMercadoLibreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2202D642BD2ECDE0005294A /* TestMercadoLibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMercadoLibreUITests.swift; sourceTree = "<group>"; };
-		F2202D662BD2ECDE0005294A /* TestMercadoLibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMercadoLibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +75,6 @@
 			children = (
 				F2202D422BD2ECD50005294A /* TestMercadoLibre */,
 				F2202D592BD2ECDD0005294A /* TestMercadoLibreTests */,
-				F2202D632BD2ECDE0005294A /* TestMercadoLibreUITests */,
 				F2202D412BD2ECD50005294A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,12 +92,7 @@
 		F2202D422BD2ECD50005294A /* TestMercadoLibre */ = {
 			isa = PBXGroup;
 			children = (
-				F2202D432BD2ECD50005294A /* AppDelegate.swift */,
-				F2202D452BD2ECD50005294A /* SceneDelegate.swift */,
-				F2202D472BD2ECD50005294A /* ViewController.swift */,
-				F2202D492BD2ECD50005294A /* Main.storyboard */,
-				F2202D4C2BD2ECDC0005294A /* Assets.xcassets */,
-				F2202D4E2BD2ECDC0005294A /* LaunchScreen.storyboard */,
+				F2B52CD22BD3498A00398894 /* App */,
 				F2202D512BD2ECDC0005294A /* Info.plist */,
 			);
 			path = TestMercadoLibre;
@@ -118,13 +106,224 @@
 			path = TestMercadoLibreTests;
 			sourceTree = "<group>";
 		};
-		F2202D632BD2ECDE0005294A /* TestMercadoLibreUITests */ = {
+		F282DB0D2BD34C2100BEFACE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				F2202D642BD2ECDE0005294A /* TestMercadoLibreUITests.swift */,
-				F2202D662BD2ECDE0005294A /* TestMercadoLibreUITestsLaunchTests.swift */,
+				F282DB0F2BD34C4800BEFACE /* CoordinatorScreens */,
+				F282DB0E2BD34C4000BEFACE /* Utils */,
 			);
-			path = TestMercadoLibreUITests;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F282DB0E2BD34C4000BEFACE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F282DB0F2BD34C4800BEFACE /* CoordinatorScreens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoordinatorScreens;
+			sourceTree = "<group>";
+		};
+		F282DB102BD34C8000BEFACE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		F282DB112BD34C9900BEFACE /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		F282DB122BD34CDD00BEFACE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F2202D4E2BD2ECDC0005294A /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		F282DB132BD34D9300BEFACE /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F2202D432BD2ECD50005294A /* AppDelegate.swift */,
+				F2202D452BD2ECD50005294A /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		F2B52CD22BD3498A00398894 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F2B52CD82BD349FE00398894 /* Storage */,
+				F2B52CD72BD349F500398894 /* Resources */,
+				F2B52CD62BD349E900398894 /* Networking */,
+				F2B52CD52BD349D000398894 /* Common */,
+				F2B52CD42BD349B300398894 /* ScreenModules */,
+				F2B52CD32BD3499300398894 /* CompositionRoot */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F2B52CD32BD3499300398894 /* CompositionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				F282DB132BD34D9300BEFACE /* System */,
+				F282DB112BD34C9900BEFACE /* DIContainer */,
+				F282DB102BD34C8000BEFACE /* Factories */,
+				F282DB0D2BD34C2100BEFACE /* Coordinator */,
+			);
+			path = CompositionRoot;
+			sourceTree = "<group>";
+		};
+		F2B52CD42BD349B300398894 /* ScreenModules */ = {
+			isa = PBXGroup;
+			children = (
+				F282DB122BD34CDD00BEFACE /* LaunchScreen */,
+				F2B52CDB2BD34A4900398894 /* ProductDetail */,
+				F2B52CDA2BD34A3600398894 /* ProductList */,
+				F2B52CD92BD34A2800398894 /* Search */,
+			);
+			path = ScreenModules;
+			sourceTree = "<group>";
+		};
+		F2B52CD52BD349D000398894 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F2B52CE52BD34B8D00398894 /* Localize */,
+				F2B52CE42BD34B7000398894 /* StateController */,
+				F2B52CE32BD34B5700398894 /* Utils */,
+				F2B52CDF2BD34AFD00398894 /* Layer */,
+				F2B52CDD2BD34AD500398894 /* Constants */,
+				F2B52CDC2BD34AC100398894 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F2B52CD62BD349E900398894 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F2B52CD72BD349F500398894 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2202D4C2BD2ECDC0005294A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2B52CD82BD349FE00398894 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		F2B52CD92BD34A2800398894 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F2202D472BD2ECD50005294A /* SearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F2B52CDA2BD34A3600398894 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		F2B52CDB2BD34A4900398894 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		F2B52CDC2BD34AC100398894 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2B52CDD2BD34AD500398894 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F2B52CDE2BD34AEA00398894 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F2B52CDF2BD34AFD00398894 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F2B52CE22BD34B3A00398894 /* Presentation */,
+				F2B52CE12BD34B2500398894 /* Domain */,
+				F2B52CE02BD34B1700398894 /* Data */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		F2B52CE02BD34B1700398894 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F2B52CE12BD34B2500398894 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F2B52CE22BD34B3A00398894 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F2B52CDE2BD34AEA00398894 /* Components */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F2B52CE32BD34B5700398894 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F2B52CE42BD34B7000398894 /* StateController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateController;
+			sourceTree = "<group>";
+		};
+		F2B52CE52BD34B8D00398894 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +432,6 @@
 			files = (
 				F2202D4D2BD2ECDC0005294A /* Assets.xcassets in Resources */,
 				F2202D502BD2ECDC0005294A /* Base in Resources */,
-				F2202D4B2BD2ECD50005294A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2202D482BD2ECD50005294A /* ViewController.swift in Sources */,
+				F2202D482BD2ECD50005294A /* SearchController.swift in Sources */,
 				F2202D442BD2ECD50005294A /* AppDelegate.swift in Sources */,
 				F2202D462BD2ECD50005294A /* SceneDelegate.swift in Sources */,
 			);
@@ -276,8 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2202D652BD2ECDE0005294A /* TestMercadoLibreUITests.swift in Sources */,
-				F2202D672BD2ECDE0005294A /* TestMercadoLibreUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +493,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F2202D492BD2ECD50005294A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F2202D4A2BD2ECD50005294A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F2202D4E2BD2ECDC0005294A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +635,7 @@
 				INFOPLIST_FILE = TestMercadoLibre/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +663,7 @@
 				INFOPLIST_FILE = TestMercadoLibre/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
