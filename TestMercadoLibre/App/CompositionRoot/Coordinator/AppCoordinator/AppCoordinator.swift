@@ -7,26 +7,29 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator{
+final class AppCoordinator: Coordinator {
     var navigation: UINavigationController
     private let appFactory: AppFactory
+    private let logger: Logger
+    private var coordinator: Coordinator?
     
-    init(navigation: UINavigationController, 
+    init(navigation: UINavigationController,
          appFactory: AppFactory,
+         logger: Logger,
          window: UIWindow?) {
         self.navigation = navigation
         self.appFactory = appFactory
+        self.logger = logger
         configWindow(window: window)
     }
     
     func start() {
-        let coordinator = appFactory.makeSearchCoordinator(navigation: navigation)
-        coordinator.start()
+        coordinator = appFactory.makeSearchCoordinator(navigation: navigation, logger: logger)
+        coordinator?.start()
     }
     
     private func configWindow(window: UIWindow?){
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }
-    
 }

@@ -8,25 +8,19 @@
 import UIKit
 
 protocol AppFactory {
-    func makeSearchCoordinator(navigation: UINavigationController) -> Coordinator
+    func makeSearchCoordinator(navigation: UINavigationController, logger: Logger) -> Coordinator
 }
 
 struct AppFactoryImp: AppFactory {
-    func makeSearchCoordinator(navigation: UINavigationController) -> Coordinator{
-//        let coordinator = SearchCoordinator(navigation: navigation)
-//        coordinator.start()
-        return FakeCoordinator(navigation: navigation)
+    let logger: Logger
+    
+    init(logger: Logger) {
+        self.logger = logger
+    }
+    
+    func makeSearchCoordinator(navigation: UINavigationController, logger: Logger) -> Coordinator {
+        let searchFactory = SearchFactoryImp()
+        return SearchCoordinator(navigation: navigation, searchFactory: searchFactory, logger: logger)
     }
 }
 
-final class FakeCoordinator: Coordinator {
-    var navigation: UINavigationController
-    
-    init(navigation: UINavigationController){
-        self.navigation = navigation
-    }
-    
-    func start() {
-        
-    }
-}
