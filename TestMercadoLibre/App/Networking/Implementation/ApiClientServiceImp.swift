@@ -7,15 +7,23 @@
 
 import Foundation
 
+/// Implementation of the `ApiClientService` protocol.
 struct ApiClientServiceImp: ApiClientService {
     private let session: URLSession
     private let logger: Logger
     
+    /// Initializes an instance of `ApiClientServiceImp`.
+    /// - Parameter logger: The logger to be used for logging.
     init(logger: Logger) {
         self.session = URLSession.shared
         self.logger = logger
     }
     
+    /// Sends a request to the specified URL and returns the decoded response.
+    /// - Parameters:
+    ///   - url: The URL to send the request to.
+    ///   - type: The type of the response object to decode.
+    /// - Returns: The decoded response object.
     func request<T: Decodable>(url: URL?, type: T.Type) async throws -> T {
         guard let url = url else {
             logger.log(message: AppLocalized.errorUrlIsNil, type: .error)
@@ -26,11 +34,17 @@ struct ApiClientServiceImp: ApiClientService {
         return try await makeRequest(url: url)
     }
     
+    /// Makes a request to the specified URL and returns the decoded response.
+    /// - Parameter url: The URL to send the request to.
+    /// - Returns: The decoded response object.
     private func makeRequest<T: Decodable>(url: URL) async throws -> T {
         let request = try await session.data(from: url)
         return try validateResponse(request: request)
     }
     
+    /// Validates the response and returns the decoded response object.
+    /// - Parameter request: The request tuple containing the response data and URL response.
+    /// - Returns: The decoded response object.
     private func validateResponse<T: Decodable>(request: (data: Data, httpResponse: URLResponse)) throws -> T {
         guard let httpResponse = request.httpResponse as? HTTPURLResponse else {
             logger.log(message: AppLocalized.invalidHttpResponse, type: .error)
@@ -53,6 +67,9 @@ struct ApiClientServiceImp: ApiClientService {
         }
     }
     
+    /// Decodes the response data into the specified type.
+    /// - Parameter data: The response data to decode.
+    /// - Returns: The decoded response object.
     private func decodeModel<T: Decodable>(data: Data) throws -> T {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)

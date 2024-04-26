@@ -7,16 +7,26 @@
 
 import UIKit
 
+/// The coordinator protocol for the `ProductListController`.
 protocol ProductListControllerCoordinator {
+    /// Called when a product item is selected.
+    /// - Parameter productId: The ID of the selected product.
     func didSelectProductItem(productId: String)
 }
 
+/// The view controller responsible for displaying a list of products.
 final class ProductListController: UICollectionViewController {
     
     private let coordinator: ProductListControllerCoordinator
     private var productList: [SearchItem] = []
     private let logger: Logger
     
+    /// Initializes the `ProductListController`.
+    /// - Parameters:
+    ///   - collectionViewLayout: The layout to use for the collection view.
+    ///   - coordinator: The coordinator object conforming to `ProductListControllerCoordinator`.
+    ///   - productList: The list of products to display.
+    ///   - logger: The logger object for logging messages.
     init(collectionViewLayout: UICollectionViewLayout, coordinator: ProductListControllerCoordinator, productList: [SearchItem], logger: Logger) {
         self.coordinator = coordinator
         self.productList = productList

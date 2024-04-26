@@ -31,6 +31,8 @@
 		F22067142BDA2DCB00552B65 /* ProductDetailRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22067132BDA2DCB00552B65 /* ProductDetailRepositoryImp.swift */; };
 		F22067162BDA473100552B65 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22067152BDA473100552B65 /* Double.swift */; };
 		F22067192BDA50E200552B65 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22067182BDA50E200552B65 /* AppLogger.swift */; };
+		F22067252BDB455900552B65 /* LoadProductDetailUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22067242BDB455900552B65 /* LoadProductDetailUseCaseTests.swift */; };
+		F220672A2BDB49F000552B65 /* LoadSearchUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22067292BDB49F000552B65 /* LoadSearchUseCaseTests.swift */; };
 		F282DB152BD34E7200BEFACE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F282DB142BD34E7200BEFACE /* Coordinator.swift */; };
 		F282DB182BD3503F00BEFACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F282DB172BD3503F00BEFACE /* AppCoordinator.swift */; };
 		F282DB1A2BD350BD00BEFACE /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F282DB192BD350BD00BEFACE /* AppFactory.swift */; };
@@ -61,7 +63,6 @@
 		F29D19792BD56DD900CD06EB /* ProductListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D19782BD56DD900CD06EB /* ProductListCoordinator.swift */; };
 		F29D197C2BD5771400CD06EB /* ProductListItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D197B2BD5771400CD06EB /* ProductListItemViewCell.swift */; };
 		F29D197E2BD5F8CC00CD06EB /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D197D2BD5F8CC00CD06EB /* Reusable.swift */; };
-		F29D19862BD63A1500CD06EB /* ApiClientServiceImpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29D19852BD63A1500CD06EB /* ApiClientServiceImpTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		F22067132BDA2DCB00552B65 /* ProductDetailRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRepositoryImp.swift; sourceTree = "<group>"; };
 		F22067152BDA473100552B65 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F22067182BDA50E200552B65 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		F22067242BDB455900552B65 /* LoadProductDetailUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadProductDetailUseCaseTests.swift; sourceTree = "<group>"; };
+		F22067292BDB49F000552B65 /* LoadSearchUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadSearchUseCaseTests.swift; path = TestMercadoLibre/App/ScreenModules/Search/Domain/UseCase/LoadSearchUseCaseTests.swift; sourceTree = SOURCE_ROOT; };
 		F282DB142BD34E7200BEFACE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F282DB172BD3503F00BEFACE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F282DB192BD350BD00BEFACE /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -136,7 +139,6 @@
 		F29D19782BD56DD900CD06EB /* ProductListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinator.swift; sourceTree = "<group>"; };
 		F29D197B2BD5771400CD06EB /* ProductListItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListItemViewCell.swift; sourceTree = "<group>"; };
 		F29D197D2BD5F8CC00CD06EB /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		F29D19852BD63A1500CD06EB /* ApiClientServiceImpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImpTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,63 @@
 				F22067182BDA50E200552B65 /* AppLogger.swift */,
 			);
 			path = Logging;
+			sourceTree = "<group>";
+		};
+		F220671C2BDB3B1B00552B65 /* ScreenModules */ = {
+			isa = PBXGroup;
+			children = (
+				F22067262BDB48E500552B65 /* Search */,
+				F220671D2BDB3B3600552B65 /* ProductDetail */,
+			);
+			path = ScreenModules;
+			sourceTree = "<group>";
+		};
+		F220671D2BDB3B3600552B65 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F220671E2BDB3B4600552B65 /* Domain */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		F220671E2BDB3B4600552B65 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F220671F2BDB3B5100552B65 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F220671F2BDB3B5100552B65 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F22067242BDB455900552B65 /* LoadProductDetailUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F22067262BDB48E500552B65 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F22067272BDB499000552B65 /* Domain */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F22067272BDB499000552B65 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F22067282BDB499600552B65 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F22067282BDB499600552B65 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F22067292BDB49F000552B65 /* LoadSearchUseCaseTests.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		F282DB0D2BD34C2100BEFACE /* Coordinator */ = {
@@ -524,25 +583,9 @@
 		F29D19822BD639B500CD06EB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				F29D19832BD639C300CD06EB /* Networking */,
+				F220671C2BDB3B1B00552B65 /* ScreenModules */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		F29D19832BD639C300CD06EB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				F29D19842BD639F000CD06EB /* Implementation */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		F29D19842BD639F000CD06EB /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				F29D19852BD63A1500CD06EB /* ApiClientServiceImpTest.swift */,
-			);
-			path = Implementation;
 			sourceTree = "<group>";
 		};
 		F2B52CD22BD3498A00398894 /* App */ = {
@@ -954,7 +997,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29D19862BD63A1500CD06EB /* ApiClientServiceImpTest.swift in Sources */,
+				F22067252BDB455900552B65 /* LoadProductDetailUseCaseTests.swift in Sources */,
+				F220672A2BDB49F000552B65 /* LoadSearchUseCaseTests.swift in Sources */,
 				F2202D5B2BD2ECDD0005294A /* TestMercadoLibreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

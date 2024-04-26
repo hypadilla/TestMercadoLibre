@@ -5,6 +5,7 @@
 //  Created by Harold Padilla on 21/04/24.
 //
 
+/// A struct that contains localized strings used in the TestMercadoLibre app.
 struct AppLocalized {
     static let error = "Error"
     static let searchOnMercadoLibre = "Search on Mercado Libre"
@@ -29,6 +30,4 @@ struct AppLocalized {
     static let failedToDequeueCell = "Failed to dequeue cell at index path: "
     static let errorLoadingProduct = "Error loading the product: "
     static let productLoadedSuccessfully = "Product loaded successfully"
-
-    
 }

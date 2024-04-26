@@ -8,10 +8,14 @@
 import UIKit
 import Combine
 
-protocol SearchViewControllerCoordinator: AnyObject{
+/// The coordinator protocol for the SearchViewController.
+protocol SearchViewControllerCoordinator: AnyObject {
+    /// Notifies the coordinator when a search list is available.
+    /// - Parameter model: The search item model.
     func didSearchList(model: [SearchItem])
 }
 
+/// The view controller responsible for handling search functionality.
 final class SearchController: UIViewController {
     
     private let viewModel: SearchViewModel
@@ -19,6 +23,11 @@ final class SearchController: UIViewController {
     private weak var coordinator: SearchViewControllerCoordinator?
     private let logger: Logger
     
+    /// Initializes the SearchController with the specified dependencies.
+    /// - Parameters:
+    ///   - viewModel: The search view model.
+    ///   - coordinator: The coordinator for the search view controller.
+    ///   - logger: The logger instance.
     init(viewModel: SearchViewModel, coordinator: SearchViewControllerCoordinator, logger: Logger) {
         self.viewModel = viewModel
         self.coordinator = coordinator
@@ -41,7 +50,7 @@ final class SearchController: UIViewController {
         navigationItem.backBarButtonItem = backBarButtton
     }
     
-    private func stateController(){
+    private func stateController() {
         viewModel.state.receive(on: RunLoop.main).sink { [weak self] state in
             self?.hideSpinner()
             switch state {

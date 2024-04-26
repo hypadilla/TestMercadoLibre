@@ -7,12 +7,14 @@
 
 import Combine
 
+/// The protocol for the product detail view model.
 protocol ProductDetailViewModel {
     var state: PassthroughSubject<StateController, Never> { get }
     var productDetail: ProductDetail { get }
     func loadProduct(productItemId: String)
 }
 
+/// The implementation of the product detail view model.
 final class ProductDetailViewModelImp: ProductDetailViewModel {
     var state: PassthroughSubject<StateController, Never>
     
@@ -30,6 +32,8 @@ final class ProductDetailViewModelImp: ProductDetailViewModel {
         return productDetail
     }
     
+    /// Loads the product with the specified item ID.
+    /// - Parameter productItemId: The ID of the product item to load.
     func loadProduct(productItemId: String) {
         state.send(.loading)
         Task {
@@ -51,4 +55,3 @@ final class ProductDetailViewModelImp: ProductDetailViewModel {
         }
     }
 }
-

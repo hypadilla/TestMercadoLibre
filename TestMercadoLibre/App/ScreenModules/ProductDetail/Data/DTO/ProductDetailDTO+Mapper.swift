@@ -6,6 +6,9 @@
 //
 
 extension ProductDetailDTO {
+    /// Converts the `ProductDetailDTO` object to a `ProductDetail` object.
+    ///
+    /// - Returns: A `ProductDetail` object.
     func toDomain() -> ProductDetail {
         return ProductDetail(id: id,
                              title: title,

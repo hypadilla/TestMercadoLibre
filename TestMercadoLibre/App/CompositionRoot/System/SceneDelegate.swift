@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// The delegate object for managing the app's scenes.
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -14,7 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var appFactory: AppFactory!
     let logger = AppLogger(subsystem: "com.hypadilla.testmercadolibre", category: "general")
     
-    
+    /// Tells the delegate that the scene is about to be displayed in a window.
+    ///
+    /// - Parameters:
+    ///   - scene: The scene that is about to be displayed.
+    ///   - session: The session object containing details about the scene's session.
+    ///   - connectionOptions: The set of options for configuring the scene.
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
@@ -41,4 +47,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
     }
 }
-

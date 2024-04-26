@@ -7,7 +7,11 @@
 
 import UIKit
 
+/// The Coordinator protocol defines the common interface for all coordinators in the app.
 protocol Coordinator {
-    var navigation: UINavigationController {get}
+    /// The navigation controller used for navigating between view controllers.
+    var navigation: UINavigationController { get }
+    
+    /// Starts the coordinator and performs any necessary setup.
     func start()
 }

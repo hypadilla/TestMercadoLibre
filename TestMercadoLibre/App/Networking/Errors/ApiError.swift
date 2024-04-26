@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enum representing different API errors.
 enum ApiError : Error {
     case clientError
     case serverError

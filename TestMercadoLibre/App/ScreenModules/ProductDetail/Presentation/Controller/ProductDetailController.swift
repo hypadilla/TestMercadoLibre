@@ -13,6 +13,7 @@ protocol ProductDetailControllerCoordinator : AnyObject{
 
 }
 
+/// The view controller responsible for displaying the product detail screen.
 final class ProductDetailController: UIViewController {
     
     private let viewModel: ProductDetailViewModel
@@ -20,6 +21,11 @@ final class ProductDetailController: UIViewController {
     private let productItemId: String
     private weak var coordinator: ProductDetailControllerCoordinator?
     
+    /// Initializes the `ProductDetailController` with the specified view model, coordinator, and product item ID.
+    /// - Parameters:
+    ///   - viewModel: The view model for the product detail screen.
+    ///   - coordinator: The coordinator for the product detail screen.
+    ///   - productItemId: The ID of the product item to display.
     init(viewModel: ProductDetailViewModel, coordinator: ProductDetailControllerCoordinator, productItemId: String) {
         self.viewModel = viewModel
         self.coordinator = coordinator

@@ -8,8 +8,10 @@
 import UIKit
 import AlamofireImage
 
+/// A custom UICollectionViewCell used to display a product item in a list.
 final class ProductListItemViewCell: UICollectionViewCell {
     
+    /// The main container view that holds all the subviews.
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
@@ -18,18 +20,22 @@ final class ProductListItemViewCell: UICollectionViewCell {
         return view
     }()
     
+    /// The image view that displays the product image.
     private let productImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         return imageView
     }()
     
+    /// The label that displays the product title.
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        label.numberOfLines = 2
         return label
     }()
     
+    /// The label that displays the product price.
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -55,6 +61,7 @@ final class ProductListItemViewCell: UICollectionViewCell {
             bottom: mainContainer.bottomAnchor,
             left: mainContainer.leftAnchor,
             pRight: 10,
+            pBottom: 10,
             pLeft: 10
         )
         
@@ -70,13 +77,14 @@ final class ProductListItemViewCell: UICollectionViewCell {
         productImageView.setConstraints(
             top: mainContainer.topAnchor,
             right: mainContainer.rightAnchor,
-            bottom: priceLabel.topAnchor,
             left: mainContainer.leftAnchor,
             pBottom: 10
         )
+        productImageView.setHeight((ViewValues.widthScreen - 60) / 2)
     }
     
-    
+    /// Configures the cell with the given view model.
+    /// - Parameter viewModel: The view model containing the data to be displayed.
     func configure(with viewModel: SearchItem) {
         titleLabel.text = viewModel.title
         if let formattedPrice = viewModel.price.formattedAsCurrency() {

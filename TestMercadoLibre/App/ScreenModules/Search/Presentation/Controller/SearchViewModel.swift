@@ -7,13 +7,18 @@
 
 import Combine
 
+/// The protocol for the search view model.
 protocol SearchViewModel {
     var state: PassthroughSubject<StateController, Never> { get }
     var searchItemCount: Int { get }
     var searchItemList: [SearchItem] { get }
+    
+    /// Called when the view has finished loading.
+    /// - Parameter searchUrl: The URL to perform the search.
     func viewDidLoad(searchUrl: String)
 }
 
+/// The implementation of the search view model.
 final class SearchViewModelImp: SearchViewModel {
     var state: PassthroughSubject<StateController, Never>
     
@@ -21,6 +26,11 @@ final class SearchViewModelImp: SearchViewModel {
     private var searchItems: [SearchItem] = []
     private let logger: Logger
     
+    /// Initializes the search view model.
+    /// - Parameters:
+    ///   - state: The state controller subject.
+    ///   - loadSearchUseCase: The use case for loading search results.
+    ///   - logger: The logger for logging messages.
     init(state: PassthroughSubject<StateController, Never>, loadSearchUseCase: LoadSearchUseCase, logger: Logger) {
         self.loadSearchUseCase = loadSearchUseCase
         self.state = state
